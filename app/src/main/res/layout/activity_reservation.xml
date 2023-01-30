@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutReservations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/welcome"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:fontFamily="@font/rubik"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/first_name_reservation"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/rubik"
+            app:layout_constraintStart_toStartOf="@+id/textViewGreeting"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGreeting" />
+
+        <ImageView
+            android:id="@+id/imageViewProfileReservations"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+
+        <ImageView
+            android:id="@+id/imageViewLogOutReservations"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/power_off"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewProfileReservations"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewProfileReservations"
+            app:layout_constraintTop_toTopOf="@+id/imageViewProfileReservations"
+            app:srcCompat="@drawable/ic_baseline_power_settings_new_24"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textViewFirstNameReservations"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/reservation_textview"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/first_name_reservation"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProfileReservations"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textViewLastNameReservations"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/reservation_textview"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/last_name_reservation"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFirstNameReservations"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textViewEmailReservations"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/reservation_textview"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/your_email"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLastNameReservations"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewReservations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#F5F7F7"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBookAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutReservations"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/textViewRecentReservations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/your_recent_bookings"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewReservations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutReservations" />
+
+    <TextView
+        android:id="@+id/textViewBookAgain"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/next_trip"
+        android:gravity="center"
+        android:text="@string/plan_your_next_trip"
+        android:textColor="#EEE489"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

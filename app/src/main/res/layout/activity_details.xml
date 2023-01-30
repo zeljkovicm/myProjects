@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:id="@+id/imageViewMainPhoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/imageViewDetailsArrowBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewMainPhoto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewMainPhoto"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    <TextView
+        android:id="@+id/textViewHotelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Hotel name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMainPhoto" />
+
+    <ImageView
+        android:id="@+id/imageViewStar"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewHotelName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewHotelName"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="4.5"
+        android:textSize="11sp"
+        app:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewStar"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewStar"
+        app:layout_constraintTop_toTopOf="@+id/imageViewStar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewHotelDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dates:"
+        android:textColor="#044363"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintStart_toStartOf="@+id/textViewHotelName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHotelName" />
+
+    <TextView
+        android:id="@+id/textViewHotelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Price :"
+        android:textColor="#044363"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintStart_toStartOf="@+id/textViewHotelDates"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHotelDates" />
+
+    <TextView
+        android:id="@+id/textViewReservationDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="18 April 2023"
+        app:fontFamily="@font/roboto"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHotelPrice"
+        app:layout_constraintStart_toEndOf="@+id/textViewHotelDates"
+        app:layout_constraintTop_toTopOf="@+id/textViewHotelDates"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewDetailHotelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="$3 - $8"
+        app:fontFamily="@font/roboto"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewHotelPrice"
+        app:layout_constraintStart_toEndOf="@+id/textViewHotelPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHotelDates"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewPhotoGalery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="Photo Galery"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewHotelPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHotelPrice" />
+
+    <ImageView
+        android:id="@+id/imageViewHeart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/like" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewGallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:background="#F5F7F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMainPhoto" />
+
+    <Button
+        android:id="@+id/buttonStartBooking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Start Booking Your Trip"
+        app:fontFamily="@font/rubik"
+        android:background="@drawable/book_button_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewHeart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHeart"
+        app:layout_constraintTop_toTopOf="@+id/imageViewHeart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

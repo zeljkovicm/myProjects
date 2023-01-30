@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewFindYour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/find_your"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:fontFamily="@font/rubik"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNextDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/next_destination"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/rubik"
+            app:layout_constraintStart_toStartOf="@+id/textViewFindYour"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFindYour" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/imageViewLogIn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/white_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_login_big" />
+
+        <ImageView
+            android:id="@+id/imageViewLogOut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/power_off"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewProfile"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewProfile"
+            app:layout_constraintTop_toTopOf="@+id/imageViewProfile"
+            app:srcCompat="@drawable/ic_baseline_power_settings_new_24" />
+
+        <EditText
+            android:id="@+id/editTextSearchDestinations"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/search_destinations"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewProfile"
+            app:layout_constraintStart_toStartOf="@+id/textViewNextDestination"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNextDestination"
+            tools:ignore="TextContrastCheck"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/editTextCheckIn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/ic_baseline_calendar_today_black"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/check_in"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextCheckOut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSearchDestinations"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextCheckOut"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/ic_baseline_calendar_today_black"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/check_out"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextCheckIn"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSearchDestinations"
+            tools:ignore="TextContrastCheck"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/search"
+            android:textColor="#343858"
+            app:backgroundTint="#EEE489"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCheckOut"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textViewTopPlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/top_places"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTopHotels"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#F5F7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTopPlaces"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="?attr/colorButtonNormal">
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/profileicon"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/flights"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/hotel"
+            tools:ignore="ImageContrastCheck" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

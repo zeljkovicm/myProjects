@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/card_bg">
+
+    <ImageView
+        android:id="@+id/cancel_button"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/cancel_btn"
+        android:contentDescription="@string/imagecancel"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textViewReservationHotelName"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/hotel_name_reservation"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+
+    <TextView
+        android:id="@+id/textViewReservationPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="pise nesto"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel_button"
+        app:layout_constraintStart_toEndOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/check_out"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewReservationCheckIn"
+        app:layout_constraintTop_toTopOf="@+id/textViewReservationCheckIn" />
+
+    <TextView
+        android:id="@+id/textViewReservationCheckOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="pise nesto"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/check_in"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView45"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/total_price"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewReservationPrice"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewReservationCheckIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pise nesto"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewReservationPrice"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
