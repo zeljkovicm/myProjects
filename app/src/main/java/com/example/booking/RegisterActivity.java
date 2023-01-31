@@ -72,12 +72,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         if((checkPassword.equals(checkConfirmPassword))){
 
                             DataBase db = new DataBase(this);
-                            db.addUser(checkFirstName, checkLastName, checkEmail, checkPassword);
+                            UserModel user = db.getUserByEmail(checkEmail);
+                            // Proveravamo da li je email vec upisan u bazu
+                            if(user != null ){
+                               Toast.makeText(this,"User already exists", Toast.LENGTH_LONG).show();
+                            }
+                            // Ako nije upisujemo novog korisnika sa tim email-om u bazu
+                            else{
+                                db.addUser(checkFirstName, checkLastName, checkEmail, checkPassword);
 
-                            Toast.makeText(this, "Registration successful.", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(this, "You will be redirected to login.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(this, "Registration successful.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "You will be redirected to login.", Toast.LENGTH_LONG).show();
 
-                            finish();
+                                finish();
+                            }
                         }
                         else{
                             Toast.makeText(this, "Password do not match!", Toast.LENGTH_SHORT).show();

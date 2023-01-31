@@ -31,7 +31,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
 
     private void setReservationRecycler(List<ReservationModel> reservations, int userId){
         ReservationRecycler = findViewById(R.id.recyclerViewReservations);
-        Log.d("fun", "U redu");
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         ReservationRecycler.setLayoutManager(layoutManager);
         ReservationAdapter = new ReservationAdapter(this, reservations, userId);

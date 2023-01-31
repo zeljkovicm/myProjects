@@ -80,7 +80,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
             // Ostale slike hotela moraju da se skinu
             LinkedList<Photo> photos = hotel.getPhotos();
-            setRecentRecycler(photos);
+            setGalleryRecycler(photos);
 
         }
         else{
@@ -89,7 +89,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    private void setRecentRecycler(LinkedList<Photo> galleryDataList){
+    private void setGalleryRecycler(LinkedList<Photo> galleryDataList){
         galleryRecycler = findViewById(R.id.recycleViewGallery);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         galleryRecycler.setLayoutManager(layoutManager);
