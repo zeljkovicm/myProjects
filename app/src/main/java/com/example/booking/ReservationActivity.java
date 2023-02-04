@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
 
     private TextView textViewName, textViewFName, textViewLName, textViewEmail;
     private TextView planNext;
+    private ImageView imageViewLogOutReservations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         textViewFName = findViewById(R.id.textViewFirstNameReservations);
         textViewLName = findViewById(R.id.textViewLastNameReservations);
         textViewEmail = findViewById(R.id.textViewEmailReservations);
+        imageViewLogOutReservations = findViewById(R.id.imageViewLogOutReservations);
+        imageViewLogOutReservations.setOnClickListener(this);
         planNext = findViewById(R.id.textViewBookAgain);
         planNext.setOnClickListener(this);
 
@@ -71,7 +75,13 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()){
             case R.id.textViewBookAgain:
                 Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             break;
+            case R.id.imageViewLogOutReservations:
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+                sp.edit().putBoolean("isLogin", false).commit();
+                finish();
+                break;
         }
         }
     }
